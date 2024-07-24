@@ -1,6 +1,7 @@
 const prompt = require ("prompt-sync")();
 
 const jogos = []
+const validarIndice = indice => indice >= 0 && indice < jogos.length
 
 const criar = () => {
     // let classind = prompt("Informe a classificação indicativa do jogo: ")
@@ -54,7 +55,7 @@ const listar = () => {
 }
 
 const atualizar = () => {
-    if (listar ()) {
+    if (!listar ()) {
         return
     }
 
@@ -74,4 +75,17 @@ const indice = prompt ("Qual o indice que deseja atualizar")
     console.log("Falha na atualização");
         }
     }
+};
+
+const remover = () => {
+    if (listar ()) {
+        return
+    }
+
+const indice = prompt ("Qual o indice que deseja remover ?") -1;
+
+if (indice >= 0 && indice < jogos.length) {
+
+}
+
 };
