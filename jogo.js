@@ -29,8 +29,26 @@ const criar = () => {
             estudio, 
             sequencia
         })
-        console.log("JOgo cadastrado com sucesso");
+        console.log("Jogo cadastrado com sucesso");
     }else {
         console.log("Dados invalidos.");
+    }
+}
+
+const listar = () => {
+    if(jogos.length == 0) {
+        console.log("Nenhum jogo cadastrado: ");
+    } else {
+        jogos.forEach( (jogo, indice) => {
+        console.log(`
+        ${indice + 1}.
+        Nome: ${jogo.nome}
+        Ano de Lançamento: ${jogo.ano_lancamento}
+        Duração: ${jogo.duracao}
+        Preço: ${jogo.preco}
+        Estudio: ${jogo.estudio}
+        Sequencia: ${jogo.sequencia}
+        `);
+        })
     }
 }
